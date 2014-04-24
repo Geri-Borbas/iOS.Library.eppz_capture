@@ -1,0 +1,348 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AE96B1361909A251009A283F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE96B1351909A251009A283F /* Foundation.framework */; };
+		AE96B1651909A276009A283F /* EPPZCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = AE96B15C1909A276009A283F /* EPPZCapture.m */; };
+		AE96B1661909A276009A283F /* EPPZAudioBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = AE96B15E1909A276009A283F /* EPPZAudioBuffer.m */; };
+		AE96B1671909A276009A283F /* EPPZAudioBufferList.m in Sources */ = {isa = PBXBuildFile; fileRef = AE96B1601909A276009A283F /* EPPZAudioBufferList.m */; };
+		AE96B1681909A276009A283F /* EPPZAudioStreamPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AE96B1621909A276009A283F /* EPPZAudioStreamPlayer.m */; };
+		AE96B1691909A276009A283F /* EPPZCaptureBufferParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AE96B1641909A276009A283F /* EPPZCaptureBufferParser.m */; };
+		AE96B16F1909A2FD009A283F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE96B16E1909A2FD009A283F /* UIKit.framework */; };
+		AE96B1711909A302009A283F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE96B1701909A302009A283F /* AVFoundation.framework */; };
+		AE96B1731909A308009A283F /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE96B1721909A308009A283F /* CoreMedia.framework */; };
+		AE96B1751909A30D009A283F /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE96B1741909A30D009A283F /* CoreVideo.framework */; };
+		AE96B1771909A311009A283F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE96B1761909A311009A283F /* QuartzCore.framework */; };
+		AE96B1791909A316009A283F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE96B1781909A316009A283F /* AudioToolbox.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AE96B1301909A251009A283F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		AE96B1321909A251009A283F /* libeppz!capture.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libeppz!capture.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE96B1351909A251009A283F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AE96B1391909A251009A283F /* eppz!capture-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "eppz!capture-Prefix.pch"; sourceTree = "<group>"; };
+		AE96B1461909A252009A283F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		AE96B15B1909A276009A283F /* EPPZCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPPZCapture.h; sourceTree = "<group>"; };
+		AE96B15C1909A276009A283F /* EPPZCapture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPPZCapture.m; sourceTree = "<group>"; };
+		AE96B15D1909A276009A283F /* EPPZAudioBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPPZAudioBuffer.h; sourceTree = "<group>"; };
+		AE96B15E1909A276009A283F /* EPPZAudioBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPPZAudioBuffer.m; sourceTree = "<group>"; };
+		AE96B15F1909A276009A283F /* EPPZAudioBufferList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPPZAudioBufferList.h; sourceTree = "<group>"; };
+		AE96B1601909A276009A283F /* EPPZAudioBufferList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPPZAudioBufferList.m; sourceTree = "<group>"; };
+		AE96B1611909A276009A283F /* EPPZAudioStreamPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPPZAudioStreamPlayer.h; sourceTree = "<group>"; };
+		AE96B1621909A276009A283F /* EPPZAudioStreamPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPPZAudioStreamPlayer.m; sourceTree = "<group>"; };
+		AE96B1631909A276009A283F /* EPPZCaptureBufferParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPPZCaptureBufferParser.h; sourceTree = "<group>"; };
+		AE96B1641909A276009A283F /* EPPZCaptureBufferParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPPZCaptureBufferParser.m; sourceTree = "<group>"; };
+		AE96B16E1909A2FD009A283F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		AE96B1701909A302009A283F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		AE96B1721909A308009A283F /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		AE96B1741909A30D009A283F /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		AE96B1761909A311009A283F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		AE96B1781909A316009A283F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		AE96B17A1909A342009A283F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		AE96B17B1909A342009A283F /* VERSIONS.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = VERSIONS.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AE96B12F1909A251009A283F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE96B1791909A316009A283F /* AudioToolbox.framework in Frameworks */,
+				AE96B1771909A311009A283F /* QuartzCore.framework in Frameworks */,
+				AE96B1751909A30D009A283F /* CoreVideo.framework in Frameworks */,
+				AE96B1731909A308009A283F /* CoreMedia.framework in Frameworks */,
+				AE96B1711909A302009A283F /* AVFoundation.framework in Frameworks */,
+				AE96B16F1909A2FD009A283F /* UIKit.framework in Frameworks */,
+				AE96B1361909A251009A283F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AE96B1291909A251009A283F = {
+			isa = PBXGroup;
+			children = (
+				AE96B17A1909A342009A283F /* README.md */,
+				AE96B17B1909A342009A283F /* VERSIONS.md */,
+				AE96B1371909A251009A283F /* eppz!capture */,
+				AE96B1341909A251009A283F /* Frameworks */,
+				AE96B1331909A251009A283F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AE96B1331909A251009A283F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AE96B1321909A251009A283F /* libeppz!capture.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AE96B1341909A251009A283F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AE96B1781909A316009A283F /* AudioToolbox.framework */,
+				AE96B1761909A311009A283F /* QuartzCore.framework */,
+				AE96B1741909A30D009A283F /* CoreVideo.framework */,
+				AE96B1721909A308009A283F /* CoreMedia.framework */,
+				AE96B1701909A302009A283F /* AVFoundation.framework */,
+				AE96B16E1909A2FD009A283F /* UIKit.framework */,
+				AE96B1351909A251009A283F /* Foundation.framework */,
+				AE96B1461909A252009A283F /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AE96B1371909A251009A283F /* eppz!capture */ = {
+			isa = PBXGroup;
+			children = (
+				AE96B15B1909A276009A283F /* EPPZCapture.h */,
+				AE96B15C1909A276009A283F /* EPPZCapture.m */,
+				AE96B16A1909A28B009A283F /* Capture buffer parser */,
+				AE96B1381909A251009A283F /* Supporting Files */,
+			);
+			path = "eppz!capture";
+			sourceTree = "<group>";
+		};
+		AE96B1381909A251009A283F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AE96B1391909A251009A283F /* eppz!capture-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AE96B16A1909A28B009A283F /* Capture buffer parser */ = {
+			isa = PBXGroup;
+			children = (
+				AE96B1631909A276009A283F /* EPPZCaptureBufferParser.h */,
+				AE96B1641909A276009A283F /* EPPZCaptureBufferParser.m */,
+				AE96B16B1909A2A2009A283F /* Audio stream player */,
+			);
+			name = "Capture buffer parser";
+			sourceTree = "<group>";
+		};
+		AE96B16B1909A2A2009A283F /* Audio stream player */ = {
+			isa = PBXGroup;
+			children = (
+				AE96B1611909A276009A283F /* EPPZAudioStreamPlayer.h */,
+				AE96B1621909A276009A283F /* EPPZAudioStreamPlayer.m */,
+				AE96B16C1909A2AB009A283F /* Audio buffer list */,
+			);
+			name = "Audio stream player";
+			sourceTree = "<group>";
+		};
+		AE96B16C1909A2AB009A283F /* Audio buffer list */ = {
+			isa = PBXGroup;
+			children = (
+				AE96B15F1909A276009A283F /* EPPZAudioBufferList.h */,
+				AE96B1601909A276009A283F /* EPPZAudioBufferList.m */,
+				AE96B16D1909A2B3009A283F /* Audio buffer */,
+			);
+			name = "Audio buffer list";
+			sourceTree = "<group>";
+		};
+		AE96B16D1909A2B3009A283F /* Audio buffer */ = {
+			isa = PBXGroup;
+			children = (
+				AE96B15D1909A276009A283F /* EPPZAudioBuffer.h */,
+				AE96B15E1909A276009A283F /* EPPZAudioBuffer.m */,
+			);
+			name = "Audio buffer";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AE96B1311909A251009A283F /* eppz!capture */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE96B1551909A252009A283F /* Build configuration list for PBXNativeTarget "eppz!capture" */;
+			buildPhases = (
+				AE96B12E1909A251009A283F /* Sources */,
+				AE96B12F1909A251009A283F /* Frameworks */,
+				AE96B1301909A251009A283F /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "eppz!capture";
+			productName = "eppz!capture";
+			productReference = AE96B1321909A251009A283F /* libeppz!capture.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AE96B12A1909A251009A283F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "eppz! development, LLC";
+			};
+			buildConfigurationList = AE96B12D1909A251009A283F /* Build configuration list for PBXProject "eppz!capture" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = AE96B1291909A251009A283F;
+			productRefGroup = AE96B1331909A251009A283F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AE96B1311909A251009A283F /* eppz!capture */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AE96B12E1909A251009A283F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE96B1681909A276009A283F /* EPPZAudioStreamPlayer.m in Sources */,
+				AE96B1691909A276009A283F /* EPPZCaptureBufferParser.m in Sources */,
+				AE96B1651909A276009A283F /* EPPZCapture.m in Sources */,
+				AE96B1661909A276009A283F /* EPPZAudioBuffer.m in Sources */,
+				AE96B1671909A276009A283F /* EPPZAudioBufferList.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AE96B1531909A252009A283F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AE96B1541909A252009A283F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AE96B1561909A252009A283F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/eppz_capture.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "eppz!capture/eppz!capture-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		AE96B1571909A252009A283F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/eppz_capture.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "eppz!capture/eppz!capture-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AE96B12D1909A251009A283F /* Build configuration list for PBXProject "eppz!capture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE96B1531909A252009A283F /* Debug */,
+				AE96B1541909A252009A283F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE96B1551909A252009A283F /* Build configuration list for PBXNativeTarget "eppz!capture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE96B1561909A252009A283F /* Debug */,
+				AE96B1571909A252009A283F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AE96B12A1909A251009A283F /* Project object */;
+}
