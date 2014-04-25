@@ -19,6 +19,9 @@
 		AE96B1751909A30D009A283F /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE96B1741909A30D009A283F /* CoreVideo.framework */; };
 		AE96B1771909A311009A283F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE96B1761909A311009A283F /* QuartzCore.framework */; };
 		AE96B1791909A316009A283F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE96B1781909A316009A283F /* AudioToolbox.framework */; };
+		D89DC07D190AA180004AF2DB /* EPPZVideoStreamService.m in Sources */ = {isa = PBXBuildFile; fileRef = D89DC07C190AA180004AF2DB /* EPPZVideoStreamService.m */; };
+		D89DC080190AAC41004AF2DB /* EPPZStreamData.m in Sources */ = {isa = PBXBuildFile; fileRef = D89DC07F190AAC41004AF2DB /* EPPZStreamData.m */; };
+		D89DC084190AB435004AF2DB /* EPPZAudioStreamBasicDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = D89DC083190AB435004AF2DB /* EPPZAudioStreamBasicDescription.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -56,6 +59,12 @@
 		AE96B1781909A316009A283F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		AE96B17A1909A342009A283F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		AE96B17B1909A342009A283F /* VERSIONS.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = VERSIONS.md; sourceTree = "<group>"; };
+		D89DC07B190AA180004AF2DB /* EPPZVideoStreamService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPPZVideoStreamService.h; sourceTree = "<group>"; };
+		D89DC07C190AA180004AF2DB /* EPPZVideoStreamService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPPZVideoStreamService.m; sourceTree = "<group>"; };
+		D89DC07E190AAC41004AF2DB /* EPPZStreamData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPPZStreamData.h; sourceTree = "<group>"; };
+		D89DC07F190AAC41004AF2DB /* EPPZStreamData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPPZStreamData.m; sourceTree = "<group>"; };
+		D89DC082190AB435004AF2DB /* EPPZAudioStreamBasicDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPPZAudioStreamBasicDescription.h; sourceTree = "<group>"; };
+		D89DC083190AB435004AF2DB /* EPPZAudioStreamBasicDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPPZAudioStreamBasicDescription.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +122,7 @@
 		AE96B1371909A251009A283F /* eppz!capture */ = {
 			isa = PBXGroup;
 			children = (
+				D89DC07A190AA163004AF2DB /* Video stream service */,
 				AE96B15B1909A276009A283F /* EPPZCapture.h */,
 				AE96B15C1909A276009A283F /* EPPZCapture.m */,
 				AE96B16A1909A28B009A283F /* Capture buffer parser */,
@@ -144,7 +154,6 @@
 			children = (
 				AE96B1611909A276009A283F /* EPPZAudioStreamPlayer.h */,
 				AE96B1621909A276009A283F /* EPPZAudioStreamPlayer.m */,
-				AE96B16C1909A2AB009A283F /* Audio buffer list */,
 			);
 			name = "Audio stream player";
 			sourceTree = "<group>";
@@ -166,6 +175,36 @@
 				AE96B15E1909A276009A283F /* EPPZAudioBuffer.m */,
 			);
 			name = "Audio buffer";
+			sourceTree = "<group>";
+		};
+		D89DC07A190AA163004AF2DB /* Video stream service */ = {
+			isa = PBXGroup;
+			children = (
+				D89DC07B190AA180004AF2DB /* EPPZVideoStreamService.h */,
+				D89DC07C190AA180004AF2DB /* EPPZVideoStreamService.m */,
+				D89DC081190AB420004AF2DB /* Stream data */,
+			);
+			name = "Video stream service";
+			sourceTree = "<group>";
+		};
+		D89DC081190AB420004AF2DB /* Stream data */ = {
+			isa = PBXGroup;
+			children = (
+				D89DC07E190AAC41004AF2DB /* EPPZStreamData.h */,
+				D89DC07F190AAC41004AF2DB /* EPPZStreamData.m */,
+				D89DC085190AB439004AF2DB /* Audio stream basic description */,
+				AE96B16C1909A2AB009A283F /* Audio buffer list */,
+			);
+			name = "Stream data";
+			sourceTree = "<group>";
+		};
+		D89DC085190AB439004AF2DB /* Audio stream basic description */ = {
+			isa = PBXGroup;
+			children = (
+				D89DC082190AB435004AF2DB /* EPPZAudioStreamBasicDescription.h */,
+				D89DC083190AB435004AF2DB /* EPPZAudioStreamBasicDescription.m */,
+			);
+			name = "Audio stream basic description";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,11 +258,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D89DC080190AAC41004AF2DB /* EPPZStreamData.m in Sources */,
 				AE96B1681909A276009A283F /* EPPZAudioStreamPlayer.m in Sources */,
 				AE96B1691909A276009A283F /* EPPZCaptureBufferParser.m in Sources */,
 				AE96B1651909A276009A283F /* EPPZCapture.m in Sources */,
 				AE96B1661909A276009A283F /* EPPZAudioBuffer.m in Sources */,
+				D89DC084190AB435004AF2DB /* EPPZAudioStreamBasicDescription.m in Sources */,
 				AE96B1671909A276009A283F /* EPPZAudioBufferList.m in Sources */,
+				D89DC07D190AA180004AF2DB /* EPPZVideoStreamService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +383,7 @@
 				AE96B1571909A252009A283F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -15,6 +15,16 @@
 #import "EPPZAudioBufferList.h"
 
 
+@interface EPPZAudioBufferList ()
+
+
+@property (nonatomic) UInt32 mNumberBuffers; // The number of AudioBuffers in the mBuffers array.
+@property (nonatomic, strong) NSArray *mBuffers; // A variable length array of AudioBuffers.
+
+
+@end
+
+
 @implementation EPPZAudioBufferList
 
 
@@ -22,12 +32,39 @@
 
 +(instancetype)audioBufferListFromAudioBufferListStruct:(AudioBufferList) audioBufferList
 {
-    return nil;
+    EPPZAudioBufferList *instance = [self new];
+    [instance representAudioBufferListStruct:audioBufferList];
+    return instance;
+}
+
+-(void)representAudioBufferListStruct:(AudioBufferList) audioBufferList
+{
+    self.mNumberBuffers = audioBufferList.mNumberBuffers;
+    
+    NSMutableArray *mBuffers = [NSMutableArray new]; // Mutable
+    for (int index = 0; index < audioBufferList.mNumberBuffers; index++)
+    {
+        AudioBuffer eachAudioBufferStruct = audioBufferList.mBuffers[index];
+        EPPZAudioBuffer *eachAudioBuffer = [EPPZAudioBuffer audioBufferFromAudioBufferStruct:eachAudioBufferStruct];
+        [mBuffers addObject:eachAudioBuffer];
+    }
+    self.mBuffers = [NSArray arrayWithArray:mBuffers]; // Immutable
 }
 
 -(AudioBufferList)audioBufferListStruct
-{
-    return (AudioBufferList){};
+{    
+    AudioBufferList audioBufferList = (AudioBufferList){};
+    audioBufferList.mNumberBuffers = self.mNumberBuffers;
+    
+    // Fill up buffers.
+    int index = 0;
+    for (EPPZAudioBuffer *eachAudioBuffer in self.mBuffers)
+    {
+        audioBufferList.mBuffers[index] = [eachAudioBuffer audioBufferStruct];
+        index++;
+    }
+     
+    return audioBufferList;
 }
 
 
@@ -35,12 +72,16 @@
 
 -(void)encodeWithCoder:(NSCoder*) encoder
 {
-    
+    [encoder encodeObject:[NSNumber numberWithUnsignedInt:self.mNumberBuffers] forKey:@"mNumberBuffers"];
+    [encoder encodeObject:self.mBuffers forKey:@"mBuffers"];
 }
 
 -(id)initWithCoder:(NSCoder*) decoder
 {
-    return nil;
+    self.mNumberBuffers = [[decoder decodeObjectForKey:@"mNumberBuffers"] unsignedIntValue];
+    self.mBuffers = [decoder decodeObjectForKey:@"mBuffers"];
+    
+    return self;
 }
 
 

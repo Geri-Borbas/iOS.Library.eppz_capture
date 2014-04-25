@@ -58,8 +58,12 @@
                                                             &blockBuffer
                                                             );
     
+    // Test only.
+    EPPZAudioBufferList *archived = [EPPZAudioBufferList audioBufferListFromAudioBufferListStruct:audioBufferList];
+    AudioBufferList reconstructed = [archived audioBufferListStruct];   
+    
     // Play.
-    [self.audioBufferPlayer submitAudioBufferListForPlay:&audioBufferList];
+    [self.audioBufferPlayer submitAudioBufferListForPlay:&reconstructed];
     
     // Release the buffer when done.
     CFRelease(blockBuffer);

@@ -13,25 +13,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AudioToolbox/AudioToolbox.h>
 #import "EPPZAudioBuffer.h"
-
-
-/*
-    struct AudioBufferList // A variable length array of AudioBuffer structures.
-    {
-        UInt32      mNumberBuffers; // The number of AudioBuffers in the mBuffers array.
-        AudioBuffer mBuffers[1]; // A variable length array of AudioBuffers.
-    };
-*/
 
 
 @interface EPPZAudioBufferList : NSObject
 
-
-@property (nonatomic, strong) NSArray *audioBuffers;
+    <NSCoding>
 
 +(instancetype)audioBufferListFromAudioBufferListStruct:(AudioBufferList) audioBufferList;
--(AudioBufferList)audioBufferListStruct;
+-(AudioBufferList)audioBufferListStruct; // A variable length array (actually a struct) of AudioBuffer structures.
 
 
 @end

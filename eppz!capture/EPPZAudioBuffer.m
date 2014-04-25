@@ -15,6 +15,17 @@
 #import "EPPZAudioBuffer.h"
 
 
+@interface EPPZAudioBuffer ()
+
+
+@property (nonatomic) UInt32 mNumberChannels; // The number of interleaved channels in the buffer.
+@property (nonatomic) UInt32 mDataByteSize; // The number of bytes in the buffer pointed at by mData.
+@property (nonatomic, strong) NSData *mData; // A pointer to the buffer of audio data.
+
+
+@end
+
+
 @implementation EPPZAudioBuffer
 
 
@@ -22,12 +33,26 @@
 
 +(instancetype)audioBufferFromAudioBufferStruct:(AudioBuffer) audioBuffer
 {
-    return nil;
+    EPPZAudioBuffer *instance = [self new];
+    [instance representAudioBufferStruct:audioBuffer];
+    return instance;
+}
+
+-(void)representAudioBufferStruct:(AudioBuffer) audioBuffer
+{
+    self.mNumberChannels = audioBuffer.mNumberChannels;
+    self.mDataByteSize = audioBuffer.mDataByteSize;
+    self.mData = [NSData dataWithBytes:audioBuffer.mData length:(NSUInteger)audioBuffer.mDataByteSize];
 }
 
 -(AudioBuffer)audioBufferStruct
 {
-    return (AudioBuffer){};
+    AudioBuffer audioBuffer = (AudioBuffer){};
+    audioBuffer.mNumberChannels = self.mNumberChannels;
+    audioBuffer.mDataByteSize = self.mDataByteSize;
+    audioBuffer.mData = (void*)self.mData.bytes;
+    
+    return audioBuffer;
 }
 
 
@@ -35,12 +60,18 @@
 
 -(void)encodeWithCoder:(NSCoder*) encoder
 {
-    
+    [encoder encodeObject:[NSNumber numberWithUnsignedInt:self.mNumberChannels] forKey:@"mNumberChannels"];
+    [encoder encodeObject:[NSNumber numberWithUnsignedInt:self.mDataByteSize] forKey:@"mDataByteSize"];
+    [encoder encodeObject:self.mData forKey:@"mData"];
 }
 
 -(id)initWithCoder:(NSCoder*) decoder
 {
-    return nil;
+    self.mNumberChannels = [[decoder decodeObjectForKey:@"mNumberChannels"] unsignedIntValue];
+    self.mDataByteSize = [[decoder decodeObjectForKey:@"mDataByteSize"] unsignedIntValue];
+    self.mData = [decoder decodeObjectForKey:@"mData"];
+    
+    return self;
 }
 
 

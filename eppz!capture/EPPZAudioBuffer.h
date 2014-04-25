@@ -16,29 +16,11 @@
 #import <AudioToolbox/AudioToolbox.h>
 
 
-/*!
- 
- struct AudioBuffer // A structure to hold a buffer of audio data.
- {
-    UInt32  mNumberChannels; // The number of interleaved channels in the buffer.
-    UInt32  mDataByteSize; // The number of bytes in the buffer pointed at by mData.
-    void*   mData; // A pointer to the buffer of audio data.
- };
- 
-*/
-
-
 @interface EPPZAudioBuffer : NSObject
 
     <NSCoding>
 
-
-@property (nonatomic) UInt32 mNumberChannels;
-@property (nonatomic) UInt32 mDataByteSize;
-@property (nonatomic, strong) NSData *mData;
-
 +(instancetype)audioBufferFromAudioBufferStruct:(AudioBuffer) audioBuffer;
--(AudioBuffer)audioBufferStruct;
-
+-(AudioBuffer)audioBufferStruct; // A structure to hold a buffer of audio data.
 
 @end

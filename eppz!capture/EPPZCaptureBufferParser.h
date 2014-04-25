@@ -16,6 +16,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreMedia/CoreMedia.h>
 #import "EPPZAudioStreamPlayer.h"
+#import "EPPZAudioBufferList.h"
 
 
 @interface EPPZCaptureBufferParser : NSObject
