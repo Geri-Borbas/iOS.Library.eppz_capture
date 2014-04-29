@@ -15,7 +15,8 @@
 @property (nonatomic, strong) EPPZCapture *capture;
 @property (nonatomic, weak) id <EPPZVideoStreamServiceDelegate> delegate;
 
-@property (nonatomic) BOOL audioFormatDelivered;
+@property (nonatomic, strong) TDAudioOutputStreamer *audioOutputStreamer;
+@property (nonatomic, strong) TDAudioInputStreamer *audioInputStreamer;
 
 
 @end
@@ -72,15 +73,7 @@
 -(void)captureDidOutputAudioBuffer:(CMSampleBufferRef) audioSampleBuffer
                          timeStamp:(CMTime) timeStamp
 {
-    // Send audio format if needed.
-    if (self.audioFormatDelivered == NO)
-    {
-        AudioStreamBasicDescription audioFormat = [self.capture.parser audioFormatOfSampleBuffer:audioSampleBuffer];
-        [self send:[[EPPZStreamData dataWithAudioStreamBasicDescription:
-                    [EPPZAudioStreamBasicDescription audioStreamBasicDescriptionFromAudioStreamBasicDescriptionStruct:audioFormat]] data]];
-        
-        self.audioFormatDelivered = YES;
-    }
+    // Write into audioStream writer bloomberg.
 }
 
 -(void)captureDidOutputImageBuffer:(CMSampleBufferRef) imageSampleBuffer
@@ -121,7 +114,18 @@
 { [self.capture startVideoCapture]; }
 
 -(void)startAudioStreaming
-{ [self.capture startAudioCapture]; }
+{
+    // Ask for a stream to write.
+    NSOutputStream *outputStream = [self.delegate videoStreamServiceOutputStreamForAudio];
+    
+    // Get the track for now.
+    NSURL *audioURL = [[NSBundle mainBundle] URLForResource:@"Street Walkin'" withExtension:@"mp3"];
+    
+    // Create, start.
+    self.audioOutputStreamer = [[TDAudioOutputStreamer alloc] initWithOutputStream:outputStream];
+    [self.audioOutputStreamer streamAudioFromURL:audioURL];
+    [self.audioOutputStreamer start];
+}
 
 -(void)stopVideoStreaming
 { [self.capture stopVideoCapture]; }
@@ -135,8 +139,15 @@
 -(void)stopVideoReceiving
 { }
 
--(void)startAudioReceiving
-{ }
+-(void)startAudioStreamReceiving:(NSInputStream*) inputStream
+{
+    if (!self.audioInputStreamer)
+    {
+        // Create, start.
+        self.audioInputStreamer = [[TDAudioInputStreamer alloc] initWithInputStream:inputStream];
+        [self.audioInputStreamer start];
+    }
+}
 
 -(void)stopAudioReceiving
 { }

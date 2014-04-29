@@ -19,6 +19,18 @@
 		AE96B1751909A30D009A283F /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE96B1741909A30D009A283F /* CoreVideo.framework */; };
 		AE96B1771909A311009A283F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE96B1761909A311009A283F /* QuartzCore.framework */; };
 		AE96B1791909A316009A283F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE96B1781909A316009A283F /* AudioToolbox.framework */; };
+		D81EE1F6190FDEBC008EB221 /* NSMutableArray+QueueMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = D81EE1DF190FDEBC008EB221 /* NSMutableArray+QueueMethods.m */; };
+		D81EE1F7190FDEBC008EB221 /* TDAudioFileStream.m in Sources */ = {isa = PBXBuildFile; fileRef = D81EE1E1190FDEBC008EB221 /* TDAudioFileStream.m */; };
+		D81EE1F8190FDEBC008EB221 /* TDAudioQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = D81EE1E3190FDEBC008EB221 /* TDAudioQueue.m */; };
+		D81EE1F9190FDEBC008EB221 /* TDAudioQueueBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = D81EE1E5190FDEBC008EB221 /* TDAudioQueueBuffer.m */; };
+		D81EE1FA190FDEBC008EB221 /* TDAudioQueueBufferManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D81EE1E7190FDEBC008EB221 /* TDAudioQueueBufferManager.m */; };
+		D81EE1FB190FDEBC008EB221 /* TDAudioQueueController.m in Sources */ = {isa = PBXBuildFile; fileRef = D81EE1E9190FDEBC008EB221 /* TDAudioQueueController.m */; };
+		D81EE1FC190FDEBC008EB221 /* TDAudioQueueFiller.m in Sources */ = {isa = PBXBuildFile; fileRef = D81EE1EB190FDEBC008EB221 /* TDAudioQueueFiller.m */; };
+		D81EE1FD190FDEBC008EB221 /* TDAudioStream.m in Sources */ = {isa = PBXBuildFile; fileRef = D81EE1ED190FDEBC008EB221 /* TDAudioStream.m */; };
+		D81EE1FE190FDEBC008EB221 /* TDAudioInputStreamer.m in Sources */ = {isa = PBXBuildFile; fileRef = D81EE1EF190FDEBC008EB221 /* TDAudioInputStreamer.m */; };
+		D81EE1FF190FDEBC008EB221 /* TDAudioOutputStreamer.m in Sources */ = {isa = PBXBuildFile; fileRef = D81EE1F1190FDEBC008EB221 /* TDAudioOutputStreamer.m */; };
+		D81EE200190FDEBC008EB221 /* TDAudioStreamerConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = D81EE1F3190FDEBC008EB221 /* TDAudioStreamerConstants.m */; };
+		D81EE201190FDEBC008EB221 /* TDAudioStreamer.m in Sources */ = {isa = PBXBuildFile; fileRef = D81EE1F5190FDEBC008EB221 /* TDAudioStreamer.m */; };
 		D89DC07D190AA180004AF2DB /* EPPZVideoStreamService.m in Sources */ = {isa = PBXBuildFile; fileRef = D89DC07C190AA180004AF2DB /* EPPZVideoStreamService.m */; };
 		D89DC080190AAC41004AF2DB /* EPPZStreamData.m in Sources */ = {isa = PBXBuildFile; fileRef = D89DC07F190AAC41004AF2DB /* EPPZStreamData.m */; };
 		D89DC084190AB435004AF2DB /* EPPZAudioStreamBasicDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = D89DC083190AB435004AF2DB /* EPPZAudioStreamBasicDescription.m */; };
@@ -59,6 +71,30 @@
 		AE96B1781909A316009A283F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		AE96B17A1909A342009A283F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		AE96B17B1909A342009A283F /* VERSIONS.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = VERSIONS.md; sourceTree = "<group>"; };
+		D81EE1DE190FDEBC008EB221 /* NSMutableArray+QueueMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+QueueMethods.h"; sourceTree = "<group>"; };
+		D81EE1DF190FDEBC008EB221 /* NSMutableArray+QueueMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+QueueMethods.m"; sourceTree = "<group>"; };
+		D81EE1E0190FDEBC008EB221 /* TDAudioFileStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDAudioFileStream.h; sourceTree = "<group>"; };
+		D81EE1E1190FDEBC008EB221 /* TDAudioFileStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDAudioFileStream.m; sourceTree = "<group>"; };
+		D81EE1E2190FDEBC008EB221 /* TDAudioQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDAudioQueue.h; sourceTree = "<group>"; };
+		D81EE1E3190FDEBC008EB221 /* TDAudioQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDAudioQueue.m; sourceTree = "<group>"; };
+		D81EE1E4190FDEBC008EB221 /* TDAudioQueueBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDAudioQueueBuffer.h; sourceTree = "<group>"; };
+		D81EE1E5190FDEBC008EB221 /* TDAudioQueueBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDAudioQueueBuffer.m; sourceTree = "<group>"; };
+		D81EE1E6190FDEBC008EB221 /* TDAudioQueueBufferManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDAudioQueueBufferManager.h; sourceTree = "<group>"; };
+		D81EE1E7190FDEBC008EB221 /* TDAudioQueueBufferManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDAudioQueueBufferManager.m; sourceTree = "<group>"; };
+		D81EE1E8190FDEBC008EB221 /* TDAudioQueueController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDAudioQueueController.h; sourceTree = "<group>"; };
+		D81EE1E9190FDEBC008EB221 /* TDAudioQueueController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDAudioQueueController.m; sourceTree = "<group>"; };
+		D81EE1EA190FDEBC008EB221 /* TDAudioQueueFiller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDAudioQueueFiller.h; sourceTree = "<group>"; };
+		D81EE1EB190FDEBC008EB221 /* TDAudioQueueFiller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDAudioQueueFiller.m; sourceTree = "<group>"; };
+		D81EE1EC190FDEBC008EB221 /* TDAudioStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDAudioStream.h; sourceTree = "<group>"; };
+		D81EE1ED190FDEBC008EB221 /* TDAudioStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDAudioStream.m; sourceTree = "<group>"; };
+		D81EE1EE190FDEBC008EB221 /* TDAudioInputStreamer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDAudioInputStreamer.h; sourceTree = "<group>"; };
+		D81EE1EF190FDEBC008EB221 /* TDAudioInputStreamer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDAudioInputStreamer.m; sourceTree = "<group>"; };
+		D81EE1F0190FDEBC008EB221 /* TDAudioOutputStreamer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDAudioOutputStreamer.h; sourceTree = "<group>"; };
+		D81EE1F1190FDEBC008EB221 /* TDAudioOutputStreamer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDAudioOutputStreamer.m; sourceTree = "<group>"; };
+		D81EE1F2190FDEBC008EB221 /* TDAudioStreamerConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDAudioStreamerConstants.h; sourceTree = "<group>"; };
+		D81EE1F3190FDEBC008EB221 /* TDAudioStreamerConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDAudioStreamerConstants.m; sourceTree = "<group>"; };
+		D81EE1F4190FDEBC008EB221 /* TDAudioStreamer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDAudioStreamer.h; sourceTree = "<group>"; };
+		D81EE1F5190FDEBC008EB221 /* TDAudioStreamer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDAudioStreamer.m; sourceTree = "<group>"; };
 		D89DC07B190AA180004AF2DB /* EPPZVideoStreamService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPPZVideoStreamService.h; sourceTree = "<group>"; };
 		D89DC07C190AA180004AF2DB /* EPPZVideoStreamService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPPZVideoStreamService.m; sourceTree = "<group>"; };
 		D89DC07E190AAC41004AF2DB /* EPPZStreamData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPPZStreamData.h; sourceTree = "<group>"; };
@@ -122,6 +158,7 @@
 		AE96B1371909A251009A283F /* eppz!capture */ = {
 			isa = PBXGroup;
 			children = (
+				D81EE1DD190FDEAC008EB221 /* TDAudioStreamer */,
 				D89DC07A190AA163004AF2DB /* Video stream service */,
 				AE96B15B1909A276009A283F /* EPPZCapture.h */,
 				AE96B15C1909A276009A283F /* EPPZCapture.m */,
@@ -175,6 +212,53 @@
 				AE96B15E1909A276009A283F /* EPPZAudioBuffer.m */,
 			);
 			name = "Audio buffer";
+			sourceTree = "<group>";
+		};
+		D81EE1DD190FDEAC008EB221 /* TDAudioStreamer */ = {
+			isa = PBXGroup;
+			children = (
+				D81EE202190FDEC2008EB221 /* Categories */,
+				D81EE203190FDECB008EB221 /* Classes */,
+				D81EE1EE190FDEBC008EB221 /* TDAudioInputStreamer.h */,
+				D81EE1EF190FDEBC008EB221 /* TDAudioInputStreamer.m */,
+				D81EE1F0190FDEBC008EB221 /* TDAudioOutputStreamer.h */,
+				D81EE1F1190FDEBC008EB221 /* TDAudioOutputStreamer.m */,
+				D81EE1F2190FDEBC008EB221 /* TDAudioStreamerConstants.h */,
+				D81EE1F3190FDEBC008EB221 /* TDAudioStreamerConstants.m */,
+				D81EE1F4190FDEBC008EB221 /* TDAudioStreamer.h */,
+				D81EE1F5190FDEBC008EB221 /* TDAudioStreamer.m */,
+			);
+			name = TDAudioStreamer;
+			sourceTree = "<group>";
+		};
+		D81EE202190FDEC2008EB221 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				D81EE1DE190FDEBC008EB221 /* NSMutableArray+QueueMethods.h */,
+				D81EE1DF190FDEBC008EB221 /* NSMutableArray+QueueMethods.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		D81EE203190FDECB008EB221 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D81EE1E0190FDEBC008EB221 /* TDAudioFileStream.h */,
+				D81EE1E1190FDEBC008EB221 /* TDAudioFileStream.m */,
+				D81EE1E2190FDEBC008EB221 /* TDAudioQueue.h */,
+				D81EE1E3190FDEBC008EB221 /* TDAudioQueue.m */,
+				D81EE1E4190FDEBC008EB221 /* TDAudioQueueBuffer.h */,
+				D81EE1E5190FDEBC008EB221 /* TDAudioQueueBuffer.m */,
+				D81EE1E6190FDEBC008EB221 /* TDAudioQueueBufferManager.h */,
+				D81EE1E7190FDEBC008EB221 /* TDAudioQueueBufferManager.m */,
+				D81EE1E8190FDEBC008EB221 /* TDAudioQueueController.h */,
+				D81EE1E9190FDEBC008EB221 /* TDAudioQueueController.m */,
+				D81EE1EA190FDEBC008EB221 /* TDAudioQueueFiller.h */,
+				D81EE1EB190FDEBC008EB221 /* TDAudioQueueFiller.m */,
+				D81EE1EC190FDEBC008EB221 /* TDAudioStream.h */,
+				D81EE1ED190FDEBC008EB221 /* TDAudioStream.m */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 		D89DC07A190AA163004AF2DB /* Video stream service */ = {
@@ -258,13 +342,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D81EE1FD190FDEBC008EB221 /* TDAudioStream.m in Sources */,
+				D81EE201190FDEBC008EB221 /* TDAudioStreamer.m in Sources */,
 				D89DC080190AAC41004AF2DB /* EPPZStreamData.m in Sources */,
+				D81EE1FA190FDEBC008EB221 /* TDAudioQueueBufferManager.m in Sources */,
+				D81EE1FB190FDEBC008EB221 /* TDAudioQueueController.m in Sources */,
 				AE96B1681909A276009A283F /* EPPZAudioStreamPlayer.m in Sources */,
+				D81EE1F7190FDEBC008EB221 /* TDAudioFileStream.m in Sources */,
+				D81EE1FF190FDEBC008EB221 /* TDAudioOutputStreamer.m in Sources */,
 				AE96B1691909A276009A283F /* EPPZCaptureBufferParser.m in Sources */,
 				AE96B1651909A276009A283F /* EPPZCapture.m in Sources */,
+				D81EE200190FDEBC008EB221 /* TDAudioStreamerConstants.m in Sources */,
 				AE96B1661909A276009A283F /* EPPZAudioBuffer.m in Sources */,
+				D81EE1FC190FDEBC008EB221 /* TDAudioQueueFiller.m in Sources */,
 				D89DC084190AB435004AF2DB /* EPPZAudioStreamBasicDescription.m in Sources */,
+				D81EE1F6190FDEBC008EB221 /* NSMutableArray+QueueMethods.m in Sources */,
+				D81EE1F9190FDEBC008EB221 /* TDAudioQueueBuffer.m in Sources */,
+				D81EE1F8190FDEBC008EB221 /* TDAudioQueue.m in Sources */,
 				AE96B1671909A276009A283F /* EPPZAudioBufferList.m in Sources */,
+				D81EE1FE190FDEBC008EB221 /* TDAudioInputStreamer.m in Sources */,
 				D89DC07D190AA180004AF2DB /* EPPZVideoStreamService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,6 +12,7 @@
 
 #import "EPPZCapture.h"
 #import "EPPZStreamData.h"
+#import "TDAudioStreamer.h"
 
 
 @protocol EPPZVideoStreamServiceDelegate  <NSObject>
@@ -24,6 +25,9 @@
  
 */
 -(void)videoStreamServiceDidOutputData:(NSData*) outputData;
+
+/*! Reaching out for an output stream where audio stream packets can be written. */
+-(NSOutputStream*)videoStreamServiceOutputStreamForAudio;
 
 @end
 
@@ -47,7 +51,7 @@
 -(void)stopAudioStreaming;
 
 -(void)startVideoReceiving;
--(void)startAudioReceiving;
+-(void)startAudioStreamReceiving:(NSInputStream*) inputStream;
 
 -(void)stopVideoReceiving;
 -(void)stopAudioReceiving;
