@@ -108,6 +108,7 @@
         case TDAudioStreamEventHasData: {
             uint8_t bytes[self.audioStreamReadMaxLength];
             UInt32 length = [audioStream readData:bytes maxLength:self.audioStreamReadMaxLength];
+            NSLog(@"TDAudioStreamEventHasData %i", (unsigned int)length);
             [self.audioFileStream parseData:bytes length:length];
             break;
         }
@@ -137,18 +138,41 @@
     self.audioQueue.delegate = self;
 }
 
-- (void)audioFileStream:(TDAudioFileStream *)audioFileStream didReceiveError:(OSStatus)error
+- (void)audioFileStream:(TDAudioFileStream *)audioFileStream didReceiveError:(OSStatus) error
 {
+    // Parese inline.
+    NSString *message = nil;
+    switch (error)
+    {
+        case kAudioFileStreamError_UnsupportedFileType: message = @"The specified file type is not supported."; break;
+        case kAudioFileStreamError_UnsupportedDataFormat: message = @"The data format is not supported by the specified file type."; break;
+        case kAudioFileStreamError_UnsupportedProperty: message = @"The property is not supported."; break;
+        case kAudioFileStreamError_BadPropertySize: message = @"The size of the buffer you provided for property data was not correct."; break;
+        case kAudioFileStreamError_NotOptimized: message = @"It is not possible to produce output packets because the streamed audio file's packet table or other defining information is not present or appears after the audio data."; break;
+        case kAudioFileStreamError_InvalidPacketOffset: message = @"A packet offset was less than 0, or past the end of the file, or a corrupt packet size was read when building the packet table."; break;
+        case kAudioFileStreamError_InvalidFile: message = @"The file is malformed, not a valid instance of an audio file of its type, or not recognized as an audio file."; break;
+        case kAudioFileStreamError_ValueUnknown: message = @"The property value is not present in this file before the audio data."; break;
+        case kAudioFileStreamError_DataUnavailable: message = @"The amount of data provided to the parser was insufficient to produce any result."; break;
+        case kAudioFileStreamError_IllegalOperation: message = @"An illegal operation was attempted."; break;
+        case kAudioFileStreamError_UnspecifiedError: message = @"An unspecified error has occurred."; break;
+        case kAudioFileStreamError_DiscontinuityCantRecover: message = @"kAudioFileStreamError_DiscontinuityCantRecover"; break;
+        default: break;
+    }
+    
+    NSLog(@"audioFileStream:didReceiveError: (%i) %@", (unsigned int)error, message);
+    
     [[NSNotificationCenter defaultCenter] postNotificationName:TDAudioStreamDidFinishPlayingNotification object:nil];
 }
 
 - (void)audioFileStream:(TDAudioFileStream *)audioFileStream didReceiveData:(const void *)data length:(UInt32)length
 {
+    NSLog(@"audioFileStream:didReceiveData: %i", (unsigned int)length);
     [TDAudioQueueFiller fillAudioQueue:self.audioQueue withData:data length:length offset:0];
 }
 
 - (void)audioFileStream:(TDAudioFileStream *)audioFileStream didReceiveData:(const void *)data length:(UInt32)length packetDescription:(AudioStreamPacketDescription)packetDescription
 {
+    NSLog(@"audioFileStream:didReceiveData:packetDescription: %i", (unsigned int)length);
     [TDAudioQueueFiller fillAudioQueue:self.audioQueue withData:data length:length packetDescription:packetDescription];
 }
 

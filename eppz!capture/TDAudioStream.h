@@ -33,6 +33,7 @@ typedef NS_ENUM(NSUInteger, TDAudioStreamEvent) {
 
 - (void)open;
 - (void)close;
+-(BOOL)hasSpaceAvailable;
 - (UInt32)readData:(uint8_t *)data maxLength:(UInt32)maxLength;
 - (UInt32)writeData:(uint8_t *)data maxLength:(UInt32)maxLength;
 

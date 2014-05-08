@@ -72,6 +72,9 @@
     return (UInt32)[(NSInputStream *)self.stream read:data maxLength:maxLength];
 }
 
+-(BOOL)hasSpaceAvailable
+{ return [(NSOutputStream*)self.stream hasSpaceAvailable]; }
+
 - (UInt32)writeData:(uint8_t *)data maxLength:(UInt32)maxLength
 {
     return (UInt32)[(NSOutputStream *)self.stream write:data maxLength:maxLength];

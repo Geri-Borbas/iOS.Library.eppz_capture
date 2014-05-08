@@ -92,7 +92,8 @@ void TDAudioFileStreamPacketsListener(void *inClientData, UInt32 inNumberBytes, 
 - (void)parseData:(const void *)data length:(UInt32)length
 {
     OSStatus err;
-
+    NSLog(@"parseData:length: %i", (unsigned int)length);
+    
     if (self.discontinuous) {
         err = AudioFileStreamParseBytes(self.audioFileStreamID, length, data, kAudioFileStreamParseFlag_Discontinuity);
         self.discontinuous = NO;

@@ -12,7 +12,9 @@
 
 #import "EPPZCapture.h"
 #import "EPPZStreamData.h"
+
 #import "TDAudioStreamer.h"
+#import "EPPZAudioOutputStreamer.h" // `TDAudioStreamer` addition
 
 
 @protocol EPPZVideoStreamServiceDelegate  <NSObject>

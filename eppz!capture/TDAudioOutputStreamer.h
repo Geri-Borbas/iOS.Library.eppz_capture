@@ -9,10 +9,14 @@
 #import <Foundation/Foundation.h>
 
 @class AVURLAsset;
+@class TDAudioStream;
 
 @interface TDAudioOutputStreamer : NSObject
 
 - (instancetype)initWithOutputStream:(NSOutputStream *)stream;
+
+// Made public.
+@property (strong, nonatomic) TDAudioStream *audioStream;
 
 - (void)streamAudioFromURL:(NSURL *)url;
 - (void)start;

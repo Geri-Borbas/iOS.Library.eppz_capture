@@ -12,7 +12,6 @@
 
 @interface TDAudioOutputStreamer () <TDAudioStreamDelegate>
 
-@property (strong, nonatomic) TDAudioStream *audioStream;
 @property (strong, nonatomic) AVAssetReader *assetReader;
 @property (strong, nonatomic) AVAssetReaderTrackOutput *assetOutput;
 @property (strong, nonatomic) NSThread *streamThread;

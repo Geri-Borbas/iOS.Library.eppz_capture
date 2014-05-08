@@ -15,7 +15,7 @@
 @property (nonatomic, strong) EPPZCapture *capture;
 @property (nonatomic, weak) id <EPPZVideoStreamServiceDelegate> delegate;
 
-@property (nonatomic, strong) TDAudioOutputStreamer *audioOutputStreamer;
+@property (nonatomic, strong) EPPZAudioOutputStreamer *audioOutputStreamer;
 @property (nonatomic, strong) TDAudioInputStreamer *audioInputStreamer;
 
 
@@ -73,7 +73,8 @@
 -(void)captureDidOutputAudioBuffer:(CMSampleBufferRef) audioSampleBuffer
                          timeStamp:(CMTime) timeStamp
 {
-    // Write into audioStream writer bloomberg.
+    // Send.
+    [self.audioOutputStreamer enqueueSampleBuffer:audioSampleBuffer];
 }
 
 -(void)captureDidOutputImageBuffer:(CMSampleBufferRef) imageSampleBuffer
@@ -119,12 +120,14 @@
     NSOutputStream *outputStream = [self.delegate videoStreamServiceOutputStreamForAudio];
     
     // Get the track for now.
-    NSURL *audioURL = [[NSBundle mainBundle] URLForResource:@"Street Walkin'" withExtension:@"mp3"];
+    // NSURL *audioURL = [[NSBundle mainBundle] URLForResource:@"Street Walkin'" withExtension:@"mp3"];
     
-    // Create, start.
-    self.audioOutputStreamer = [[TDAudioOutputStreamer alloc] initWithOutputStream:outputStream];
-    [self.audioOutputStreamer streamAudioFromURL:audioURL];
+    // Create.
+    self.audioOutputStreamer = [[EPPZAudioOutputStreamer alloc] initWithOutputStream:outputStream];
     [self.audioOutputStreamer start];
+    
+    // Take off capture session.
+    [self.capture startAudioCapture];
 }
 
 -(void)stopVideoStreaming

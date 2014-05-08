@@ -31,6 +31,7 @@
 		D81EE1FF190FDEBC008EB221 /* TDAudioOutputStreamer.m in Sources */ = {isa = PBXBuildFile; fileRef = D81EE1F1190FDEBC008EB221 /* TDAudioOutputStreamer.m */; };
 		D81EE200190FDEBC008EB221 /* TDAudioStreamerConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = D81EE1F3190FDEBC008EB221 /* TDAudioStreamerConstants.m */; };
 		D81EE201190FDEBC008EB221 /* TDAudioStreamer.m in Sources */ = {isa = PBXBuildFile; fileRef = D81EE1F5190FDEBC008EB221 /* TDAudioStreamer.m */; };
+		D81EE208190FE967008EB221 /* EPPZAudioOutputStreamer.m in Sources */ = {isa = PBXBuildFile; fileRef = D81EE207190FE967008EB221 /* EPPZAudioOutputStreamer.m */; };
 		D89DC07D190AA180004AF2DB /* EPPZVideoStreamService.m in Sources */ = {isa = PBXBuildFile; fileRef = D89DC07C190AA180004AF2DB /* EPPZVideoStreamService.m */; };
 		D89DC080190AAC41004AF2DB /* EPPZStreamData.m in Sources */ = {isa = PBXBuildFile; fileRef = D89DC07F190AAC41004AF2DB /* EPPZStreamData.m */; };
 		D89DC084190AB435004AF2DB /* EPPZAudioStreamBasicDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = D89DC083190AB435004AF2DB /* EPPZAudioStreamBasicDescription.m */; };
@@ -95,6 +96,8 @@
 		D81EE1F3190FDEBC008EB221 /* TDAudioStreamerConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDAudioStreamerConstants.m; sourceTree = "<group>"; };
 		D81EE1F4190FDEBC008EB221 /* TDAudioStreamer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDAudioStreamer.h; sourceTree = "<group>"; };
 		D81EE1F5190FDEBC008EB221 /* TDAudioStreamer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDAudioStreamer.m; sourceTree = "<group>"; };
+		D81EE206190FE967008EB221 /* EPPZAudioOutputStreamer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPPZAudioOutputStreamer.h; sourceTree = "<group>"; };
+		D81EE207190FE967008EB221 /* EPPZAudioOutputStreamer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPPZAudioOutputStreamer.m; sourceTree = "<group>"; };
 		D89DC07B190AA180004AF2DB /* EPPZVideoStreamService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPPZVideoStreamService.h; sourceTree = "<group>"; };
 		D89DC07C190AA180004AF2DB /* EPPZVideoStreamService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPPZVideoStreamService.m; sourceTree = "<group>"; };
 		D89DC07E190AAC41004AF2DB /* EPPZStreamData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPPZStreamData.h; sourceTree = "<group>"; };
@@ -158,6 +161,10 @@
 		AE96B1371909A251009A283F /* eppz!capture */ = {
 			isa = PBXGroup;
 			children = (
+				D81EE206190FE967008EB221 /* EPPZAudioOutputStreamer.h */,
+				D81EE207190FE967008EB221 /* EPPZAudioOutputStreamer.m */,
+				D89DC081190AB420004AF2DB /* Stream data */,
+				AE96B16C1909A2AB009A283F /* Audio buffer list */,
 				D81EE1DD190FDEAC008EB221 /* TDAudioStreamer */,
 				D89DC07A190AA163004AF2DB /* Video stream service */,
 				AE96B15B1909A276009A283F /* EPPZCapture.h */,
@@ -266,7 +273,6 @@
 			children = (
 				D89DC07B190AA180004AF2DB /* EPPZVideoStreamService.h */,
 				D89DC07C190AA180004AF2DB /* EPPZVideoStreamService.m */,
-				D89DC081190AB420004AF2DB /* Stream data */,
 			);
 			name = "Video stream service";
 			sourceTree = "<group>";
@@ -277,7 +283,6 @@
 				D89DC07E190AAC41004AF2DB /* EPPZStreamData.h */,
 				D89DC07F190AAC41004AF2DB /* EPPZStreamData.m */,
 				D89DC085190AB439004AF2DB /* Audio stream basic description */,
-				AE96B16C1909A2AB009A283F /* Audio buffer list */,
 			);
 			name = "Stream data";
 			sourceTree = "<group>";
@@ -344,6 +349,7 @@
 			files = (
 				D81EE1FD190FDEBC008EB221 /* TDAudioStream.m in Sources */,
 				D81EE201190FDEBC008EB221 /* TDAudioStreamer.m in Sources */,
+				D81EE208190FE967008EB221 /* EPPZAudioOutputStreamer.m in Sources */,
 				D89DC080190AAC41004AF2DB /* EPPZStreamData.m in Sources */,
 				D81EE1FA190FDEBC008EB221 /* TDAudioQueueBufferManager.m in Sources */,
 				D81EE1FB190FDEBC008EB221 /* TDAudioQueueController.m in Sources */,
